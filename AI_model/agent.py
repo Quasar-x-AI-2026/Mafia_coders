@@ -3,6 +3,7 @@ from livekit import agents
 from livekit.agents import AgentSession, Agent, RoomInputOptions
 from livekit.plugins import noise_cancellation
 from livekit.plugins import google
+from section import fee_submission_guide
 from prompt import AGENT_INSTRUCTION, SESSION_INSTRUCTION
 from tools import (
     get_weather,
@@ -25,7 +26,8 @@ class Assistant(Agent):
                 get_weather,
                 search_web,
                 send_email,
-                search_real_time  # integrated into assistant
+                search_real_time,
+                fee_submission_guide# integrated into assistant
             ],
         )
 
